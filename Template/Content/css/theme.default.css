@@ -273,6 +273,13 @@ label { color: #242a30; }
 
 .content { margin-left: 220px; padding: 20px 25px; }
 
+.modal.scale .modal-dialog { -webkit-transform: scale(0.1); -moz-transform: scale(0.1); -ms-transform: scale(0.1); transform: scale(0.1); top: 300px; opacity: 0; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
+.modal.scale.in .modal-dialog { -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); transform: scale(1); -webkit-transform: translate3d(0, -300px, 0); transform: translate3d(0, -300px, 0); opacity: 1; }
+.modal .modal-footer .btn { min-width: 70px; }
+.loading { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 9999999; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGAwBgAAOAA0CC32ngAAAABJRU5ErkJggg==); }
+.loading .loading-content { position: absolute; top: 50%; left: 50%; margin-top: -32px; margin-left: -32px; text-align: center; color: #076db2; }
+.loading .loading-content .loading-text { margin-top: 5px; }
+
 /*---- Reponsive -------*/
 @media (max-width:767px) {
     .page-header-fixed { /*padding-top:109px*/ }
