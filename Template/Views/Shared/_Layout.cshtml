@@ -13,12 +13,11 @@
     <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/fonts/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet" />
     <link href="~/Content/css/animate.min.css" rel="stylesheet" />
-    <link href="~/Content/css/theme.default.css" rel="stylesheet" />
+    <link href="~/Content/css/theme.default.css" rel="stylesheet" />    
     <link href="~/Scripts/toastr/toastr.min.css" rel="stylesheet" />
     @RenderSection("styles", required: false)
 </head>
 <body>
-
     <div id="page-container" class="fade page-sidebar-fixed page-header-fixed in">
         <div class="header navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
@@ -58,7 +57,7 @@
                                 </li>
                                 <li class="divider"></li>
                                 <li>
-                                    <a href="#">Cerrar Sesión</a>
+                                    <a href="~/account/logout">Cerrar Sesión</a>
                                 </li>
                             </ul>
                         </li>
@@ -66,7 +65,6 @@
                 </div>
             </div>
         </div>
-
         <div id="sidebar" class="sidebar animated fadeInUp">
             <div data-scrollbar="true" data-height="100%">
                 <ul class="nav">
