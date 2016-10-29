@@ -11,6 +11,7 @@
     <title>Iniciar sesión</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700">
     <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/animate.min.css" rel="stylesheet" />
     <link href="~/Content/css/reseet.css" rel="stylesheet" />    
     <link href="~/Content/css/custom-forms.css" rel="stylesheet" />
     <style type="text/css">        
@@ -31,7 +32,7 @@
             </a>
             <h3 class="login-heading">Iniciar sesión</h3>
             <div class="login-form">
-                @using (Html.BeginForm("Login", null, FormMethod.Post, new { @daa_toggle = "validator" }))
+                @using (Html.BeginForm("Login", null, FormMethod.Post, new { @data_toggle = "validator" }))
                 {
                     <div class="form-group">
                         <label for="username" class="control-label">Usuario</label>
