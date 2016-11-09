@@ -1,0 +1,90 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700">
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/animate.min.css" rel="stylesheet" />
+    <link href="~/Content/css/reseet.css" rel="stylesheet" />    
+    <link href="~/Content/css/custom-forms.css" rel="stylesheet" />
+    <style type="text/css">        
+        body { font-family: Roboto,sans-serif; font-size: 13px; background: #ECEFF1; color: #777; display: table; height: 100%; min-height: 600px; position: absolute; width: 100%; }
+        .login { display: table-cell; vertical-align: middle; }
+        .login-body { -webkit-animation-duration: 1s; -o-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; -o-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-name: fadeInUp; -o-animation-name: fadeInUp; animation-name: fadeInUp; margin-left: auto; margin-right: auto; max-width: 360px; padding: 30px; }
+        .login-brand { display: block; margin-left: auto; margin-right: auto; width: 140px; }
+        .login-heading { font-weight: 300; margin-bottom: 15px; margin-top: 30px; text-align: center; }
+        .login-footer { bottom: 0; font-size: 11px; position: absolute; text-align: center; width: 100%; }
+        .list-inline { text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="login-body">
+            <a class="login-brand" href="javascript:;">
+                <img class="img-responsive" src="~/content/img/logo.png" alt="Company">
+            </a>
+            <h3 class="login-heading">Iniciar sesión</h3>
+            <div class="login-form">
+                @using (Html.BeginForm("Login", null, FormMethod.Post, new { @data_toggle = "validator" }))
+                {
+                    <div class="form-group">
+                        <label for="username" class="control-label">Usuario</label>
+                        <input id="username" class="form-control" type="text" name="username" spellcheck="false" autocomplete="off" data-msg-required="Por favor ingrese su usuario." required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">Contraseña</label>
+                        <input id="password" class="form-control" type="password" name="password" minlength="1" data-msg-minlength="Password debe tener 6 caracteres o más." data-msg-required="Por favor ingrese su password.">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">Iniciar sesión</button>
+                    </div>
+                    <div class="form-group">
+                        <ul class="list-inline">
+                            <li>                                
+                                <label class="custom-control custom-control-primary custom-checkbox">
+                                    <input class="custom-control-input" type="checkbox">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-label">Recordar usuario</span>
+                                </label>
+                            </li>
+                        </ul>                        
+                        <ul class="list-inline">
+                            <li><a href="#">¿Olvidaste tu usuario?</a></li>
+                            <li>
+                                <span aria-hidden="true"> · </span>
+                            </li>
+                            <li><a href="#">Olvidaste tu password?</a></li>
+                        </ul>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="login-footer">
+            <ul class="list-inline">               
+                <li><a class="link-muted" href="#">Política de privacidad</a></li>
+                <li>|</li>
+                <li><a class="link-muted" href="#">Términos</a></li>
+                <li>|</li>
+                <li><a class="link-muted" href="#">Política de cookies</a></li>
+                <li>|</li>
+                <li>© Copyright 2016</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+        });
+    </script>
+</body>
+</html>
