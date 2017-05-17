@@ -41,7 +41,7 @@ label { color: #242a30; }
 
 /* ---- Navbar ---- */
 
-.navbar { border: none; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; -webkit-box-shadow: 0 0 2px rgba(0,0,0,.3); box-shadow: 0 0 2px rgba(0,0,0,.3); }
+.header.navbar { border: none; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; -webkit-box-shadow: 0 0 2px rgba(0,0,0,.3); box-shadow: 0 0 2px rgba(0,0,0,.3); }
 
 .navbar .navbar-header { float: none; }
 
