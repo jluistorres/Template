@@ -9,7 +9,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 input[type='text'], input[type='password'], select, textarea { border: 1px solid #ccc; }
 input:focus, select:focus, textarea:focus, .form-control:focus { border-color: #ccc; }
 input[type='text'], input[type='password'], select, textarea, .form-control, input:focus, select:focus, textarea:focus, .well { box-shadow: none !important; }
-input[type='text'], input[type='password'], select, textarea, .panel, .input-group-addon, .form-control, .btn, .well, .alert, .progress { border-radius: 0 !important; }
+input[type='text'], input[type='password'], select, textarea, .panel, .input-group-addon, .form-control, .btn, .well, .alert, .progress, .panel-heading { border-radius: 0 !important; }
 div:focus, span:focus, button:focus, input:focus, select:focus, textarea:focus, .btn:focus, .btn:active:focus, .btn.active:focus { outline: none !important; }
 input[type="number"].textfield::-webkit-outer-spin-button, input[type="number"].textfield::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 input[type="number"].textfield { -moz-appearance: textfield; }
