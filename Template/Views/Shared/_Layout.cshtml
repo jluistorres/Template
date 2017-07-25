@@ -9,11 +9,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema - @ViewBag.Title</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700" rel="stylesheet">
     <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/fonts/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet" />
     <link href="~/Content/css/animate.min.css" rel="stylesheet" />
-    <link href="~/Content/css/theme.default.css" rel="stylesheet" />
+    <link href="~/Content/css/theme.light.css" rel="stylesheet" />
     <link href="~/Scripts/toastr/toastr.min.css" rel="stylesheet" />
     @RenderSection("styles", required: false)
 </head>
@@ -39,7 +39,17 @@
                                 <i class="fa fa-bell-o fa-lg"></i>
                             </a>
                             <ul class="dropdown-menu media-list pull-right animated fadeInDown">
-                                <li class="dropdown-header">Notificaciones (<span>0</span>)</li>
+                                <li class="dropdown-header">Notificaciones (<span>1</span>)</li>
+                                <li class="media">
+                                    <a href="javascript:;">
+                                        <div class="media-left"><i class="fa fa-bug media-object"></i></div>
+                                        <div class="media-body">
+                                            <h6 class="media-heading">Reporte de errores del sistema</h6>
+                                            <p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
+                                            <div class="text-muted">Hace 3 minutos</div>
+                                        </div>
+                                    </a>
+                                </li>
                                 <li class="dropdown-footer text-center"></li>
                             </ul>
                         </li>

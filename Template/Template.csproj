@@ -80,8 +80,10 @@
   <ItemGroup>
     <Content Include="Content\css\animate.min.css" />
     <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\custom-forms.css" />
     <Content Include="Content\css\reseet.css" />
     <Content Include="Content\css\theme.default.css" />
+    <Content Include="Content\css\theme.light.css" />
     <Content Include="Content\fonts\font-awesome-4.6.3\css\font-awesome.css" />
     <Content Include="Content\fonts\font-awesome-4.6.3\css\font-awesome.min.css" />
     <Content Include="Content\fonts\font-awesome-4.6.3\fonts\fontawesome-webfont.svg" />
