@@ -389,7 +389,7 @@ table { width: 100%; }
         to { right: 0; }
     }
 
-    .page-sidebar-toggled .sidebar { left: 0; animation: sidebarSlideInLeft .2s; -webkit-animation: sidebarSlideInLeft .2s; box-shadow: 215px 0 100px 600px rgba(191, 191, 191, 0.3); }
+    .page-sidebar-toggled .sidebar { left: 0; animation: sidebarSlideInLeft .2s; -webkit-animation: sidebarSlideInLeft .2s; box-shadow: 215px 0 100px 600px rgba(0, 0, 0, 0.3); }
 
     .page-sidebar-toggled .sidebar-bg { position: fixed; background: #2d353c; left: 0; animation: sidebarSlideInLeft .2s; -webkit-animation: sidebarSlideInLeft .2s; }
 
