@@ -226,6 +226,8 @@ label { color: #242a30; }
 
 .sidebar-minify-btn { margin: 10px 0; float: right; padding: 5px 20px 5px 10px !important; background: #024169; color: #fff; -webkit-border-radius: 20px 0 0 20px; -moz-border-radius: 20px 0 0 20px; border-radius: 20px 0 0 20px; }
 
+.sidebar .nav > li > a.sidebar-minify-btn:hover, .sidebar .nav > li > a.sidebar-minify-btn:focus { background-color: #012942; }
+
 .sidebar-minify-btn i { margin: 0 !important; color: #fff; }
 
 .page-sidebar-minified .sidebar-minify-btn i:before { content: '\f101'; }
