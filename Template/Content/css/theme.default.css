@@ -148,13 +148,13 @@ label { color: #242a30; }
 
 .sidebar .sub-menu {padding: 10px 0 10px 30px;margin: 0;background: rgba(0, 51, 82, 0.71);position: relative;display: none;}
 
-.sidebar .sub-menu:before { content: ''; position: absolute; left: 26px; top: 0; bottom: 0; width: 2px; background: #005d97; }
+.sidebar .sub-menu:before {content: '';position: absolute;left: 26px;top: 0;bottom: 0;width: 2px;background: #cfd3d7;}
 
 .sidebar .sub-menu .sub-menu { padding: 0 0 0 30px; background: 0 0; }
 
 .sidebar .sub-menu > li > a { padding: 5px 20px; display: block; font-weight: 300; color: #efeeee; text-decoration: none; position: relative; font-size: 12px; }
 
-.sidebar .sub-menu > li > a:before { content: '\f111'; font-family: FontAwesome; position: absolute; left: 0; font-size: 7px; color: #005d97; top: 50%; margin-top: -4px; margin-left: -6px; }
+.sidebar .sub-menu > li > a:before {content: '\f111';font-family: FontAwesome;position: absolute;left: 0;font-size: 7px;color: #ced2d6;top: 50%;margin-top: -4px;margin-left: -6px;}
 
 .sidebar .sub-menu > li.active > a, .sidebar .sub-menu > li.active > a:focus, .sidebar .sub-menu > li.active > a:hover, .sidebar .sub-menu > li > a:focus, .sidebar .sub-menu > li > a:hover { color: #fff; }
 
