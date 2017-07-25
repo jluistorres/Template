@@ -430,7 +430,7 @@ table { width: 100%; }
 
 /*------ nav-bar body -----*/
 @media (min-width: 768px) {
-    /*.navbar.bar-menu .container-fluid { padding-left: 0; }*/ .navbar-header { float: left; }
+    .navbar-header { float: left; }
 
     .navbar-nav { float: left; margin: 0; }
 
@@ -445,5 +445,6 @@ table { width: 100%; }
 
 @media (max-width: 340px) {
     .navbar-form .form-control, .navbar-form .form-control:focus { width: 140px !important; }
+
     .nav > li.dropdown-list-notifications { position: initial; }
 }
