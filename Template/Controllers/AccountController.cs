@@ -75,6 +75,8 @@ namespace Template.Controllers
         public ActionResult LogOut()
         {
             Session.Clear();
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+
             return RedirectToAction("login");
         }
 	}
