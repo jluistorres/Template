@@ -6,21 +6,22 @@ using System.Web.Mvc;
 
 namespace Template.Controllers
 {
+    [Authorize]
     public class BaseController : Controller
     {
         protected override void Initialize(System.Web.Routing.RequestContext requestContext)
         {
-            if (requestContext.HttpContext.Session["Usuario"] == null)
-            {
-                string url = requestContext.HttpContext.Request.Url.AbsoluteUri;
-                string ReturnUrl = "";
-                if (url != "/")
-                {
-                    ReturnUrl = "?ReturnUrl=" + url;
-                }
+            //if (requestContext.HttpContext.Session["Usuario"] == null)
+            //{
+            //    string url = requestContext.HttpContext.Request.Url.AbsoluteUri;
+            //    string ReturnUrl = "";
+            //    if (url != "/")
+            //    {
+            //        ReturnUrl = "?ReturnUrl=" + url;
+            //    }
 
-                requestContext.HttpContext.Response.Redirect("~/Account/Login" + ReturnUrl, true);
-            }
+            //    requestContext.HttpContext.Response.Redirect("~/Account/Login" + ReturnUrl, true);
+            //}
 
             base.Initialize(requestContext);
         }

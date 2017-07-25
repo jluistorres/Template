@@ -34,14 +34,19 @@
             <div class="login-form">
                 @using (Html.BeginForm("Login", null, FormMethod.Post, new { @data_toggle = "validator" }))
                 {
+                    @Html.Hidden("returnUrl", Request.QueryString["ReturnUrl"])
                     <div class="form-group">
                         <label for="username" class="control-label">Usuario</label>
                         <input id="username" class="form-control" type="text" name="username" spellcheck="false" autocomplete="off" data-msg-required="Por favor ingrese su usuario." required autofocus>
                     </div>
                     <div class="form-group">
                         <label for="password" class="control-label">Contraseña</label>
-                        <input id="password" class="form-control" type="password" name="password" minlength="1" data-msg-minlength="Password debe tener 6 caracteres o más." data-msg-required="Por favor ingrese su password.">
+                        <input id="password" class="form-control" type="password" name="password" data-msg-minlength="Password debe tener 6 caracteres o más." data-msg-required="Por favor ingrese su password.">
                     </div>
+                    if (ViewBag.Error != null)
+                    {
+                        <p class="alert alert-danger"><i class="fa fa-exclamation-circle fa-fw"></i> @ViewBag.Error</p>
+                    }
                     <div class="form-group">
                         <button class="btn btn-primary btn-block" type="submit">Iniciar sesión</button>
                     </div>
