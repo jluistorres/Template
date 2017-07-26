@@ -11,9 +11,9 @@
     <title>Sistema - @ViewBag.Title</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700" rel="stylesheet">
     <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/fonts/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="~/Content/css/animate.min.css" rel="stylesheet" />
-    <link href="~/Content/css/theme.default.css" rel="stylesheet" />
+    <link href="~/Content/css/theme.light.css" rel="stylesheet" />
     <link href="~/Scripts/toastr/toastr.min.css" rel="stylesheet" />
     @RenderSection("styles", required: false)
 </head>
@@ -31,14 +31,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                    </button>                    
+                    </button>
                 </div>
                 <!--navbar right-->
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <form class="navbar-form full-width">
+                        <form action="~/buscar" class="navbar-form full-width">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Buscar...">
+                                <input type="text" class="form-control" name="keywords" placeholder="Buscar...">
                                 <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
                             </div>
                         </form>
@@ -89,7 +89,7 @@
                 <ul class="nav">
                     <li class="nav-header">Menu</li>
                     <li class="has-sub active">
-                        <a href="~/"><i class="fa fa-laptop"></i><span>Pantalla principal</span></a>
+                        <a href="~/"><i class="fa fa-desktop"></i><span>Pantalla principal</span></a>
                     </li>
                     <li class="has-sub">
                         <a href="javascript:;">
@@ -100,24 +100,24 @@
                         <ul class="sub-menu">
                             <li><a href="#">Opción del menú</a></li>
                             <li><a href="#">Opción del menú</a></li>
-                            <li><a href="#">Opción del menú</a></li>                            
+                            <li><a href="#">Opción del menú</a></li>
                         </ul>
                     </li>
                     <li class="has-sub">
                         <a href="javascript:;">
                             <b class="caret pull-right"></b>
-                            <i class="fa fa-folder-open-o"></i>
+                            <i class="fa fa-shopping-bag"></i>
                             <span>Menú Level</span>
                         </a>
                         <ul class="sub-menu">
                             <li><a href="#">Opción del menú</a></li>
-                            <li><a href="#">Opción del menú</a></li>                            
+                            <li><a href="#">Opción del menú</a></li>
                         </ul>
                     </li>
                     <li class="has-sub">
                         <a href="javascript:;">
                             <b class="caret pull-right"></b>
-                            <i class="fa fa-align-left"></i>
+                            <i class="fa fa-file-text-o"></i>
                             <span>Menu Level</span>
                         </a>
                         <ul class="sub-menu">
