@@ -146,15 +146,15 @@ label { color: #242a30; }
 
 .sidebar .has-sub.active > .sub-menu { display: block; }
 
-.sidebar .sub-menu {padding: 10px 0 10px 30px;margin: 0;background: rgba(0, 51, 82, 0.71);position: relative;display: none;}
+.sidebar .sub-menu { padding: 10px 0 10px 30px; margin: 0; background: rgba(37, 40, 41, 0.45); position: relative; display: none; }
 
-.sidebar .sub-menu:before {content: '';position: absolute;left: 26px;top: 0;bottom: 0;width: 2px;background: #cfd3d7;}
+.sidebar .sub-menu:before { content: ''; position: absolute; left: 26px; top: 0; bottom: 0; width: 2px; background: #cfd3d7; }
 
 .sidebar .sub-menu .sub-menu { padding: 0 0 0 30px; background: 0 0; }
 
 .sidebar .sub-menu > li > a { padding: 5px 20px; display: block; font-weight: 300; color: #efeeee; text-decoration: none; position: relative; font-size: 12px; }
 
-.sidebar .sub-menu > li > a:before {content: '\f111';font-family: FontAwesome;position: absolute;left: 0;font-size: 7px;color: #ced2d6;top: 50%;margin-top: -4px;margin-left: -6px;}
+.sidebar .sub-menu > li > a:before { content: '\f111'; font-family: FontAwesome; position: absolute; left: 0; font-size: 7px; color: #ced2d6; top: 50%; margin-top: -4px; margin-left: -6px; }
 
 .sidebar .sub-menu > li.active > a, .sidebar .sub-menu > li.active > a:focus, .sidebar .sub-menu > li.active > a:hover, .sidebar .sub-menu > li > a:focus, .sidebar .sub-menu > li > a:hover { color: #fff; }
 
@@ -212,9 +212,9 @@ label { color: #242a30; }
 
 .page-sidebar-minified .sidebar .nav > li > a > i { margin: 0; }
 
-.page-sidebar-minified .sidebar .nav li.has-sub > .sub-menu {position: absolute;left: 100%;top: 0;width: 220px;display: none;padding: 10px 0 10px 30px;margin: 0;background: #257fb7;}
+.page-sidebar-minified .sidebar .nav li.has-sub > .sub-menu { position: absolute; left: 100%; top: 0; width: 220px; display: none; padding: 10px 0 10px 30px; margin: 0; background: #257fb7; }
 
-.page-sidebar-minified .sidebar .nav > li.has-sub:focus > a, .page-sidebar-minified .sidebar .nav > li.has-sub:hover > a {background: rgba(255, 255, 255, 0.15);}
+.page-sidebar-minified .sidebar .nav > li.has-sub:focus > a, .page-sidebar-minified .sidebar .nav > li.has-sub:hover > a { background: rgba(255, 255, 255, 0.15); }
 
 .page-sidebar-minified .sidebar li.has-sub > .sub-menu { display: none !important; }
 
@@ -224,9 +224,9 @@ label { color: #242a30; }
 
 .page-sidebar-minified .sidebar .nav > li.has-sub li.has-sub .sub-menu { margin-top: -10px; }
 
-.sidebar-minify-btn { margin: 10px 0; float: right; padding: 5px 20px 5px 10px !important; background: #024169; color: #fff; -webkit-border-radius: 20px 0 0 20px; -moz-border-radius: 20px 0 0 20px; border-radius: 20px 0 0 20px; }
+.sidebar-minify-btn { margin: 10px 0; float: right; padding: 5px 20px 5px 10px !important; background: rgba(0, 0, 0, 0.27); color: #fff; -webkit-border-radius: 20px 0 0 20px; -moz-border-radius: 20px 0 0 20px; border-radius: 20px 0 0 20px; }
 
-.sidebar .nav > li > a.sidebar-minify-btn:hover, .sidebar .nav > li > a.sidebar-minify-btn:focus { background-color: #012942; }
+.sidebar .nav > li > a.sidebar-minify-btn:hover, .sidebar .nav > li > a.sidebar-minify-btn:focus { background-color: rgba(0, 0, 0, 0.42); }
 
 .sidebar-minify-btn i { margin: 0 !important; color: #fff; }
 
