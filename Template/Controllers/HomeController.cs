@@ -43,7 +43,7 @@ namespace Template.Controllers
                     Titulo = "Notificación de prueba",
                     Detalle = "Mensaje de consola",
                     Tipo = 1,
-                    Url = null,
+                    Url = (i == 0 ? "Buscar" : null),
                     Fecha = DateTime.Now,
                     IdReceptor = 1
                 });

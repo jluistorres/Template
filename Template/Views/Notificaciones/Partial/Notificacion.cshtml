@@ -16,7 +16,7 @@
                 var item = Model[i];
 
                 <li class="media" data-id="@item.IdNotificacion" data-id-emisor="@item.IdEmisor">
-                    <a href="@(string.IsNullOrEmpty(item.Url) ? "~/" + item.Url : "javascript:;")">
+                    <a href="@(!string.IsNullOrEmpty(item.Url) ? Url.Content("~/" + item.Url) : "javascript:;")">
                         <div class="media-left"><i class="fa fa-flag media-object"></i></div>
                         <div class="media-body">
                             <h6 class="media-heading">@(item.Titulo ?? item.Emisor)</h6>
