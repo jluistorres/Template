@@ -1,0 +1,50 @@
+﻿@model List<NotificacionItemBag>
+
+@{
+    int total = Model != null ? Model.Count : 0;
+}
+
+<li class="dropdown-header" data-count="@total">Notificaciones</li>
+@if (Model != null && Model.Count > 0)
+{
+    int mostrar = 15, display = total > mostrar ? mostrar : total;
+
+    <li>
+        <ul class="media-list scroller" style="max-height:250px;">
+            @for (int i = 0; i < display; i++)
+            {
+                var item = Model[i];
+
+                <li class="media" data-id="@item.IdNotificacion" data-id-emisor="@item.IdEmisor">
+                    <a href="javascript:;">
+                        <div class="media-left"><i class="fa fa-flag media-object"></i></div>
+                        <div class="media-body">
+                            <h6 class="media-heading">@(item.Titulo ?? item.Emisor)</h6>
+                            <p>@Html.Raw(item.Detalle)</p>
+                            <div class="text-muted">@item.Fecha</div>
+                        </div>
+                    </a>
+                    <b class="media-delete">&times;</b>
+                </li>
+            }
+            @if (total > display)
+            {
+                <li class="text-center" style="padding:5px;"><a>+@(total - display) notificaciones más...</a></li>
+            }
+        </ul>
+    </li>
+    <li class="dropdown-footer text-center">
+        <a href="#">Ir a la bandeja</a>
+    </li>
+}
+else
+{
+    <li class="empty-list text-center">
+        <i class="fa fa-bell-slash-o fa-5x"></i><br /><br />
+        ¡Le avisaremos cuando tengamos algo nuevo para usted!
+    </li>
+}
+
+
+
+

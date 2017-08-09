@@ -4,17 +4,44 @@
         generateSlimScroll($(this))
     })
 },
-generateSlimScroll = function (e) {
-    if (!$(e).attr("data-init")) {
-        var a = $(e).attr("data-height");
-        a = a ? a : $(e).height();
-        var t = {
-            height: a,
-            alwaysVisible: !0
-        };
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? ($(e).css("height", a), $(e).css("overflow-x", "scroll")) : $(e).slimScroll(t), $(e).attr("data-init", !0)
-    }
-},
+    generateSlimScroll = function (e) {
+        if (!$(e).attr("data-init")) {
+            var a = $(e).attr("data-height");
+            a = a ? a : $(e).height();
+            var t = {
+                height: a,
+                alwaysVisible: !0
+            };
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? ($(e).css("height", a), $(e).css("overflow-x", "scroll")) : $(e).slimScroll(t), $(e).attr("data-init", !0)
+        }
+    },
+    handleScrollers = function () {
+        var iMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+        $('body .scroller').each(function () {
+            if (!iMobile) {
+                //var height;
+                //if ($(this).attr("data-height")) {
+                //    height = $(this).attr("data-height");
+                //} else {
+                //    height = $(this).css('height');
+                //}
+                $(this).slimScroll({
+                    allowPageScroll: false, // allow page scroll when the element scroll is ended
+                    size: '7px',
+                    color: ($(this).attr("data-handle-color") ? $(this).attr("data-handle-color") : '#bbb'),
+                    railColor: ($(this).attr("data-rail-color") ? $(this).attr("data-rail-color") : '#eaeaea'),
+                    position: 'right',
+                    height: '', //height,
+                    alwaysVisible: ($(this).attr("data-always-visible") == "1" ? true : false),
+                    railVisible: ($(this).attr("data-rail-visible") == "1" ? true : false),
+                    disableFadeOut: true
+                });
+            } else {
+                $(this).css({ 'overflow': 'auto' });
+            }            
+        });
+    },
     handleSidebarMenu = function () {
         "use strict";
         $(".sidebar .nav > .has-sub > a").click(function () {
@@ -268,6 +295,9 @@ generateSlimScroll = function (e) {
                 $("html, body").animate({
                     scrollTop: $("body").offset().top
                 }, 0)
+            },
+            scroller: function () {
+                handleScrollers();
             }
         }
     }();

@@ -34,6 +34,7 @@
             <div class="login-form">
                 @using (Html.BeginForm("Login", null, FormMethod.Post, new { @data_toggle = "validator" }))
                 {
+                    @*@Html.AntiForgeryToken()*@
                     @Html.Hidden("returnUrl", Request.QueryString["ReturnUrl"])
                     <div class="form-group">
                         <label for="username" class="control-label">Usuario</label>
@@ -79,7 +80,7 @@
                 <li>|</li>
                 <li><a class="link-muted" href="#">Política de cookies</a></li>
                 <li>|</li>
-                <li>© Copyright 2016</li>
+                <li>© Copyright 2017</li>
             </ul>
         </div>
     </div>
