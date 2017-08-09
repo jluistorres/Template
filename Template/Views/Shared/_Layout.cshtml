@@ -6,10 +6,12 @@
 
 <html>
 <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema - @ViewBag.Title</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700" rel="stylesheet">    
     <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="~/Content/css/animate.min.css" rel="stylesheet" />
@@ -106,8 +108,8 @@
                         <ul class="dropdown-menu animated fadeInDown" data-url="@Url.Content("~/Articulo/")"></ul>
                     </li>
                     <li class="dropdown navbar-user">
-                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                            <img src="~/content/img/avatar.png">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">                            
+                            <i class="fa fa-user-o fa-lg"></i>
                             <span class="hidden-xs">
                                 <span></span>
                             </span> <b class="caret"></b>
@@ -115,8 +117,8 @@
                         <ul class="dropdown-menu animated fadeInLeft">
                             <li class="arrow"></li>
                             <li>
-                                <a href="#">@SessionHelper.User.Nombres @SessionHelper.User.ApellidoPaterno</a>
-                            </li>
+                                <a href="#">Editar perfil</a>
+                            </li>                           
                             <li class="divider"></li>
                             <li>
                                 <a href="~/account/logout">Cerrar Sesión</a>
@@ -129,13 +131,23 @@
         <div id="sidebar" class="sidebar animated fadeInUp">
             <div data-scrollbar="true" data-height="100%">
                 <ul class="nav">
+                    <li class="nav-profile">
+                        <div class="image">
+                            <a href="javascript:;"><img src="~/Content/img/avatar.png" alt=""></a>
+                        </div>
+                        <div class="info">
+                            @SessionHelper.User.Nombres 
+                            <small>@SessionHelper.User.ApellidoPaterno @SessionHelper.User.ApellidoMaterno</small>
+                        </div>
+                    </li>
                     <li class="nav-header">Sistema de Gestión &reg; Panel</li>
                     <li class="has-sub active">
                         <a href="~/"><i class="fa fa-desktop"></i><span>Pantalla principal</span></a>
                     </li>
                     <li class="has-sub">
                         <a href="javascript:;">
-                            <b class="caret pull-right"></b>
+                            @*<b class="caret pull-right"></b>*@
+                            <span class="badge pull-right">3</span>
                             <i class="fa fa-folder-open-o"></i>
                             <span>Menú Level</span>
                         </a>
