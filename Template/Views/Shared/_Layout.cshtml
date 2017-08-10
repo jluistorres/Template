@@ -1,5 +1,5 @@
 ﻿@{    
-    var ArticuloBag = (List<ArticuloItemBag>)HttpContext.Current.Session["ArticuloBag"];
+    var ArticuloBag = (List<ArticuloItemBag>)HttpContext.Current.Session["ArticuloBag"];  
 }
 
 <!DOCTYPE html>
@@ -141,12 +141,11 @@
                         </div>
                     </li>
                     <li class="nav-header">Sistema de Gestión &reg; Panel</li>
-                    <li class="has-sub active">
+                    <li class="has-sub">
                         <a href="~/"><i class="fa fa-desktop"></i><span>Pantalla principal</span></a>
                     </li>
                     <li class="has-sub">
-                        <a href="javascript:;">
-                            @*<b class="caret pull-right"></b>*@
+                        <a href="javascript:;">                            
                             <span class="badge pull-right">3</span>
                             <i class="fa fa-folder-open-o"></i>
                             <span>Menú Level</span>

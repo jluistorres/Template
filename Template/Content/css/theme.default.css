@@ -173,7 +173,7 @@ label { color: #242a30; }
 
 .sidebar .nav > li li.has-sub.active > a { color: #889097; }
 
-.sidebar .sub-menu > li.active > a:before { color: #00acac; }
+/*.sidebar .sub-menu > li.active > a:before { color: #00acac; }*/
 
 .sidebar .nav .sub-menu > li > a .caret { float: right; margin-top: 7px; }
 
