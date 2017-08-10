@@ -118,34 +118,10 @@ var AppLayout = function () {
         //});
     }
 
-    var handleActiveSidebar = function () {
-        var items = $('.nav a');
-        var location = window.location.pathname;       
-
-        //Buscamos todas las coincidencias de la url actual en el nav sidebar
-        items.each(function (index, a) {
-            var href = $(a).attr('href');
-            if (href != '' && href == location) {
-                $(a).parent().addClass('active');                
-
-                var el = $(a).parent();
-                do {
-                    if (el.hasClass('sub-menu')) el.show();
-                    else if (el.hasClass('has-sub')) el.addClass('expand');
-                    el = el.parent();                    
-                } while (el.hasClass('has-sub') || el.hasClass('sub-menu'));
-
-                //Retornamos si encontramos la primera coincidencia
-                return !1;
-            }
-        });
-    }
-
     return {
         init: function () {
             handleBag();
-            handlePropagation();
-            handleActiveSidebar();
+            handlePropagation();            
         }
     };
 }();

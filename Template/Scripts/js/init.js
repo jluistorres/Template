@@ -60,6 +60,28 @@
             }
         })
     },
+    handleActiveSidebar = function () {
+        var items = $('.sidebar .nav a');
+        var location = window.location.pathname;
+
+        //Buscamos todas las coincidencias de la url actual en el nav sidebar
+        items.each(function (index, a) {
+            var href = $(a).attr('href');
+            if (href != '' && href == location) {
+                $(a).parent().addClass('active');
+
+                var el = $(a).parent();
+                do {
+                    if (el.hasClass('sub-menu')) el.show();
+                    else if (el.hasClass('has-sub')) el.addClass('expand');
+                    el = el.parent();
+                } while (el.hasClass('has-sub') || el.hasClass('sub-menu'));
+
+                //Retornamos si encontramos la primera coincidencia
+                return !1;
+            }
+        });
+    },
     handleMobileSidebarToggle = function () {
         var e = !1;
         $(".sidebar").bind("click touchstart", function (a) {
@@ -266,7 +288,7 @@
     },
     handleClearSidebarMobileSelection = function () {
         $("#page-container").removeClass("page-sidebar-toggled")
-    },
+    },    
     AppTheme = function () {
         //"use strict";
         return {
@@ -274,7 +296,7 @@
                 this.initSidebar(), this.initPageLoad(), this.initComponent(), this.initThemePanel()
             },
             initSidebar: function () {
-                handleSidebarMenu(), handleMobileSidebarToggle(), handleSidebarMinify(), handleMobileSidebar()
+                handleSidebarMenu(), handleMobileSidebarToggle(), handleSidebarMinify(), handleMobileSidebar(), handleActiveSidebar()
             },
             initSidebarSelection: function () {
                 handleClearSidebarSelection()
