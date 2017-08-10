@@ -111,11 +111,6 @@ var AppLayout = function () {
         $('body').on('click', '.dropdown-list .dropdown-menu', function (e) {
             e.stopPropagation();
         });
-
-        //$(document).click(function () {            
-        //    $('.top-cart-content').hide();
-        //    $('.dropdown-list').removeClass('open');
-        //});
     }
 
     return {
