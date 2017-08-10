@@ -189,9 +189,13 @@ label { color: #242a30; }
 
 .breadcrumb { padding: 0; background: transparent; }
 
+.breadcrumb > li a { color: #333; }
+
 .breadcrumb > li + li:before { content: "\f105"; font-family: FontAwesome; font-size: 14px; color: #a6b7bf; }
 
 .breadcrumb > li, .page-header { line-height: 28px; }
+
+.page-header { font-size: 24px; margin: 0 0 20px; padding: 0; border: none; }
 
 .sidebar .nav > li.nav-header a { padding: 0; margin: 0; display: inline; }
 
