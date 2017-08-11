@@ -62,12 +62,12 @@
     },
     handleActiveSidebar = function () {
         var items = $('.sidebar .nav a');
-        var location = window.location.pathname;
+        var location = window.location.pathname || '';
 
         //Buscamos todas las coincidencias de la url actual en el nav sidebar
         items.each(function (index, a) {
-            var href = $(a).attr('href');
-            if (href != '' && href == location) {
+            var href = $(a).attr('href') || '';
+            if (href != '' && href.toLowerCase() == location.toLowerCase()) {
                 $(a).parent().addClass('active');
 
                 var el = $(a).parent();
