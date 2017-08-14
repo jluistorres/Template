@@ -24,7 +24,7 @@ var AppLayout = function () {
 
             var numItems = $(target).find('.list-count');
             var bag = $(target).find('.dropdown-menu');
-            bag.html('<li class="media"><a>Cargando...<a/></li>');
+            bag.html('<li class="empty-list">Cargando...</li>');
 
             var url = bag.data('url') + 'BagList';
             $.get(url).done(function (html) {
@@ -121,7 +121,7 @@ var AppLayout = function () {
     };
 }();
 
-$(function () {
+$(function () {    
     AppTheme.init();
     AppLayout.init();
 });

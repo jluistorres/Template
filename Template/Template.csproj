@@ -152,7 +152,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\js\app.js" />
     <Content Include="Scripts\js\init.js" />
-    <Content Include="Scripts\js\init.layout.js" />
+    <Content Include="Scripts\js\layout.js" />
     <Content Include="Scripts\knockout-3.4.0.debug.js" />
     <Content Include="Scripts\knockout-3.4.0.js" />
     <Content Include="Scripts\knockout.mapping-latest.js" />

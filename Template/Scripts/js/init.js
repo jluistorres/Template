@@ -9,8 +9,9 @@
             var a = $(e).attr("data-height");
             a = a ? a : $(e).height();
             var t = {
-                height: a,
-                alwaysVisible: !0
+                height: a,                
+                alwaysVisible: !1,
+                color: 'rgba(0,0,0,0.3)'
             };
             /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? ($(e).css("height", a), $(e).css("overflow-x", "scroll")) : $(e).slimScroll(t), $(e).attr("data-init", !0)
         }

@@ -1,5 +1,5 @@
 ﻿@{    
-    var ArticuloBag = (List<ArticuloItemBag>)HttpContext.Current.Session["ArticuloBag"];  
+    var ArticuloBag = (List<ArticuloItemBag>)HttpContext.Current.Session["ArticuloBag"] ?? new List<ArticuloItemBag>();  
 }
 
 <!DOCTYPE html>
@@ -102,8 +102,8 @@
                     </li>
                     <li class="dropdown dropdown-list">
                         <a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle">
-                            <i class="fa fa-opencart fa-lg"></i>
-                            <span class="label list-count">@(ArticuloBag != null ? ArticuloBag.Count : 0)</span>
+                            <i class="fa fa-opencart fa-lg"></i>                            
+                            <span class="label list-count">@ArticuloBag.Count</span>
                         </a>
                         <ul class="dropdown-menu animated fadeInDown" data-url="@Url.Content("~/Articulo/")"></ul>
                     </li>
@@ -146,7 +146,7 @@
                     </li>
                     <li class="has-sub">
                         <a href="javascript:;">                            
-                            <span class="badge pull-right">3</span>
+                            <b class="caret pull-right"></b>
                             <i class="fa fa-folder-open-o"></i>
                             <span>Menú Level</span>
                         </a>
@@ -220,7 +220,7 @@
     <script src="~/Scripts/toastr/toastr.min.js"></script>
     <script src="~/Scripts/sweetAlert/sweetalert.min.js"></script>
     <script src="~/Scripts/js/init.js"></script>
-    <script src="~/Scripts/js/init.layout.js"></script>
+    <script src="~/Scripts/js/layout.js"></script>
     <script src="~/Scripts/js/app.js"></script>
     @RenderSection("scripts", required: false)
 </body>
