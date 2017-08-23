@@ -4,7 +4,13 @@
     int total = Model != null ? Model.Count : 0;
 }
 
-<li class="dropdown-header" data-count="@total">Notificaciones</li>
+<li class="dropdown-header clearfix" data-count="@total">
+    <strong>Notificaciones</strong>
+    @if (total > 0)
+    {
+        <a class="clear" href="javascript:;">Borrar todo</a>
+    }
+</li>
 @if (Model != null && Model.Count > 0)
 {
     int mostrar = 15, display = total > mostrar ? mostrar : total;

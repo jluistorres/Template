@@ -40,5 +40,14 @@ namespace Template.Controllers
                 }
             }
         }
+
+        [HttpPost]
+        public void BagRemoveAll()
+        {
+            //obrNotificaciones = new brNotificaciones();
+            //obrNotificaciones.EliminarByReceptor(SessionHelper.User.IdPersonal);
+            
+            Session.Remove("NotificacionBag");
+        }
 	}
 }

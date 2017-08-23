@@ -64,7 +64,7 @@ var AppLayout = function () {
         });
 
         //Eliminar todos los items
-        $('body').on('click', '.dropdown-list .dropdown-footer a.clear', function () {
+        $('body').on('click', '.dropdown-list a.clear', function () {
             var cart = $(this).closest('.dropdown-list');
             var action = cart.find('.dropdown-menu').data('url') + 'BagRemoveAll'; //$(this).data('action');
             var isNotificacion = $(this).closest('.dropdown-list').hasClass('notifications');

@@ -29,7 +29,7 @@
                 //}
                 $(this).slimScroll({
                     allowPageScroll: false, // allow page scroll when the element scroll is ended
-                    size: '7px',
+                    size: '5px',
                     color: ($(this).attr("data-handle-color") ? $(this).attr("data-handle-color") : '#bbb'),
                     railColor: ($(this).attr("data-rail-color") ? $(this).attr("data-rail-color") : '#eaeaea'),
                     position: 'right',

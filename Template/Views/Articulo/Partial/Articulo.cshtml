@@ -4,9 +4,15 @@
     int total = Model != null ? Model.Count : 0;
 }
 
-<li class="dropdown-header" data-count="@total">Artículos</li>
+<li class="dropdown-header clearfix" data-count="@total">
+    <strong>Artículos</strong>
+    @if (total > 0)
+    {
+        <a class="clear" href="javascript:;">Borrar todo</a>
+    }
+</li>
 @if (Model != null && Model.Count > 0)
-{        
+{
     <li>
         <ul class="media-list scroller" style="max-height:250px;">
             @foreach (var item in Model)
@@ -28,7 +34,7 @@
         </ul>
     </li>
     <li class="dropdown-footer text-center">
-        <a class="clear">Borrar todo</a>
+        <a href="javascript:;">Ir a cotizar</a>
     </li>
 }
 else
